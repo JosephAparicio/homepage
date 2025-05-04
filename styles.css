@@ -215,6 +215,7 @@ body {
     height: 3px;
     background-color: var(--divider-color);
     border-radius: 2px;
+}
 
 /* contact info styles */
 .contact-info__header,
@@ -472,6 +473,7 @@ body {
 
 .language-item {
     margin-bottom: 15px;
+}
 
 /* experience and additional info styles */
 .experiences {
