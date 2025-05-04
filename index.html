@@ -1,173 +1,316 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Résumé</title>
+    <title>Joseph Aparicio | CV</title>
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- tsParticles libraries - Add slim AND full version -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2.0.6/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.min.js"></script>
 </head>
 
 <body>
-    <main>
-        <div class="resume">
-            <div class="container">
-                <div class="resume__block">
-                    <h1 class="contact-info__header">Joseph Aparicio</h1>
-                    <h3 class="contact-info__sub-header">Computer Engineering</h3>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="#">JA</a>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-item">Home</a>
+                    <a href="#about" class="nav-item">About me</a>
+                    <a href="#skills" class="nav-item">Skills</a>
+                    <a href="#experience" class="nav-item">Experience</a>
+                    <a href="#projects" class="nav-item">Projects</a>
+                    <a href="#education" class="nav-item">Education</a>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Contenedor para el efecto de explosión -->
+    <div id="explosion-container"></div>
+
+    <main>
+        <section id="home" class="resume">
+            <div class="container">
+                <div class="resume__block animate-item">
+                    <h1 class="contact-info__header">Joseph Aparicio</h1>
+                    <div class="section-header">
+                        <h2>Computer Engineering</h2>
+                    </div>
                     <div class="contact_info_container fh">
                         <div class="contact-info__block">
-                            <p>Phone: +1 (555) 123-4567</p>
+                            <p class="contact-item"><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                            <p class="contact-item"><i class="fas fa-envelope"></i> joseph_539_11@hotmail.com</p>
+                            <p class="contact-item"><i class="fas fa-map-marker-alt"></i> Lima, Peru</p>
+                            <a href="https://www.linkedin.com/in/josephaparicio/" rel="author" class="contact-item">
+                                <i class="fab fa-linkedin"></i>LinkedIn
+                            </a>
                         </div>
 
                         <div class="contact-info__block contact-info__block--center">
-                            <img class="contact-info__avatar" src="assets/avatar.jpg" alt="Avatar" />
-                        </div>
-
-                        <div class="contact-info__block">
-                            <p>Email: joseph_539_11@hotmail.com</p>
-                            <a href="#" rel="author" class="contact-info__item">
-                                <div class="contact-info__item-icon-wrapper">
-                                    <svg class="contact-info__item-icon" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 384 512">
-                                        <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0
-                            192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535
-                            13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817
-                            80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-                                    </svg>
+                            <div class="avatar-container">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img class="contact-info__avatar" src="assets/avatar.jpg" alt="Avatar" />
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="bomb-warning">
+                                                <h2>¡WARNING! <i class="fas fa-bomb"></i></h2>
+                                                <p>A bomb has been activated and will explode in <span
+                                                        id="countdown">10</span> seconds.</p>
+                                                <div class="back-instruction">
+                                                    <p>FIND THE BUTTON AT THE BOTTOM OF THE PAGE TO DEACTIVATE! 💣 ⏱️
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span>Lima, Peru</span>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/josephaparicio/" rel="author"
-                                class="contact-info__item">
-                                <div class="contact-info__item-icon-wrapper">
-                                    <svg class="contact-info__item-icon" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 448 512">
-                                        <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9
-                            480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4
-                            416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9
-                            96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5
-                            38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9
-                            27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5
-                            62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-                                    </svg>
-                                </div>
-                                <span>Joseph Aparicio LinkedIn</span>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-            <div class="container">
-                <div class="resume__block">
+            <div id="about" class="container">
+                <div class="resume__block animate-item">
+                    <div class="section-header">
+                        <h2>About me</h2>
+                        <div class="section-divider"></div>
+                    </div>
                     <div class="intro">
                         <div class="intro__icon-wrapper">
-                            <svg class="intro__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7
-                          24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0
-                          26.5 21.5 48 48 48h128c26.5 0 48-21.5
-                          48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64
-                          64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0
-                          103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0
-                          48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
-                            </svg>
+                            <i class="fas fa-quote-left"></i>
                         </div>
-                        <p class="intro_text">I'm a student in the advanced stages of the Computer Engineering program
-                            at the Pontifical Catholic University of Peru, with an interest in software development,web
-                            development,
-                            cybersecurity, data management and analysis, as well as program development and automation.
+                        <p class="intro_text">
+                            I'm a student in the advanced stages of the Computer Engineering program
+                            at the Pontifical Catholic University of Peru, with an interest in software development, web
+                            development, cybersecurity, data management and analysis, as well as program development and
+                            automation.
                             I am mainly characterized by being passionate about the areas that interest me most, such as
                             technology.
                             I am curious and always strive to learn, whether through self-teaching or my academic
                             background,
                             to keep developing my skills. I enjoy working in teams, as it allows for sharing and
                             generating more
-                            optimal or creative ideas, but I am also capable of advancing on my own.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="resume__block">
-                    <div class="skills">
-                        <h3 class="skills__header">Skills</h3>
-                        <p class="skills__text">
-                            Problem Solving, Critical Thinking, Team Collaboration, Continuous Learning, Adaptability
+                            optimal or creative ideas, but I am also capable of advancing on my own.
                         </p>
                     </div>
-
-                    <div class="skills">
-                        <h3 class="skills__header">Languages</h3>
-                        <p class="skills__text">Spanish (Native), English (Intermediate)</p>
-                    </div>
-
-                    <div class="skills">
-                        <h3 class="skills__header">Character</h3>
-                        <p class="skills__text">Determined, Insightful, Curious, Responsible</p>
-                    </div>
                 </div>
             </div>
 
-            <div class="container">
-                <div class="resume__block">
-                    <div class="main-info fh">
-                        <div class="experiences"></div>
-                        <h3 class="experiences__header">Experience</h3>
+            <div id="skills" class="container">
+                <div class="resume__block animate-item">
+                    <div class="section-header">
+                        <h2>Skills</h2>
+                        <div class="section-divider"></div>
+                    </div>
 
-                        <div class="experiences__company">
-                            <div class="experiences__company-header">
-                                <span class="experiences__company-header-durability">March 2024 - April 2025</span>
-                                <h3 class="experiences__company-header-name">Banco de Crédito del Perú</h3>
-                            </div>
-
-                            <div class="experiences__company-project">
-                                <span class="experiences__company-project-role">Finance, IT, Data & Operations
-                                    Intern</span>
-                                <h3 class="experiences__company-project-name">Resource Management & Support</h3>
-                                <ul class="experiences__company-project-responsibilities">
-                                    <li>Send 100+ official documents weekly to tech service providers, ensuring precise
-                                        communication.</li>
-                                    <li>Resolve issues and inquiries related to the request process and Power Apps
-                                        usage.</li>
-                                    <li>Provide daily support for the list ecosystem connected to the resource request
-                                        Power App.</li>
-                                    <li>Manage monthly data entry of 400+ requested resources to assess operational
-                                        indicators.</li>
-                                </ul>
-                            </div>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3 class="skills__header">Abilities</h3>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+                                <li><i class="fas fa-check-circle"></i> Critical Thinking</li>
+                                <li><i class="fas fa-check-circle"></i> Team Collaboration</li>
+                                <li><i class="fas fa-check-circle"></i> Continuous Learning</li>
+                                <li><i class="fas fa-check-circle"></i> Adaptability</li>
+                            </ul>
                         </div>
 
-                        <div class="additional-info fv">
-
-                            <div class="additional-info fv">
-                                <div class="additional-info__education">
-                                    <h3 class="additional-info__education-header">Education</h3>
-                                    <div class="additional-info__education-university">
-                                        <span class="additional-info__education-university-durability">2023 -
-                                            Present</span>
-                                        <h3 class="additional-info__education-university-speciality">Computer
-                                            Engineering</h3>
-                                        <p class="additional-info__education-university-name">Pontificia Universidad
-                                            Católica del Perú</p>
+                        <div class="skill-category">
+                            <h3 class="skills__header">Languages</h3>
+                            <div class="language-bars">
+                                <div class="language-item">
+                                    <span>Español (Nativo)</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 100%"></div>
                                     </div>
                                 </div>
-
-                                <div class="additional-info__languages">
-                                    <h3 class="additional-info__languages-header">Languages</h3>
-                                    <p class="additional-info__languages-item">Spanish</p>
-                                    <p class="additional-info__languages-item">English</p>
+                                <div class="language-item">
+                                    <span>English (Intermedio)</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 65%"></div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="skills__header">Characteristics</h3>
+                            <div class="character-traits">
+                                <span class="trait">Determined</span>
+                                <span class="trait">Insightful</span>
+                                <span class="trait">Curious</span>
+                                <span class="trait">Responsible</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div id="experience" class="container">
+                <div class="resume__block animate-item">
+                    <div class="section-header">
+                        <h2>Experience</h2>
+                        <div class="section-divider"></div>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-company">
+                                <h3>Banco de Crédito del Perú</h3>
+                                <span class="duration">March 2024 - April 2025</span>
+                            </div>
+                            <div class="experience-role">
+                                <h4>Finance, IT, Data & Operations Intern</h4>
+                                <h5>Resource Management & Support</h5>
+                            </div>
+                        </div>
+                        <div class="experience-details">
+                            <ul>
+                                <li>Send 100+ official documents weekly to tech service providers, ensuring precise
+                                    communication.</li>
+                                <li>Resolve issues and inquiries related to the request process and Power Apps
+                                    usage.</li>
+                                <li>Provide daily support for the list ecosystem connected to the resource request
+                                    Power App.</li>
+                                <li>Manage monthly data entry of 400+ requested resources to assess operational
+                                    indicators.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="container">
+                <div class="resume__block animate-item">
+                    <div class="section-header">
+                        <h2>Projects</h2>
+                        <div class="section-divider"></div>
+                    </div>
+
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fa-regular fa-hospital"></i>
+                            </div>
+                            <h3>Integrated Clinical Management System</h3>
+                            <p>Co-designed a clinical management system implementing 20+ functional requirements.
+                                Contributed to login, user profiles, multi-role logic, UI template, and password
+                                encryption.
+                                Used MySQL, Java (DAO), C#, Bootstrap, JavaScript, HTML, CSS, SOAP, and AWS.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>C#</span>
+                                <span>MySQL</span>
+                                <span>Web Development</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <h3>Student Grades Management System</h3>
+                            <p>Project to manage grades of multiple students across different courses.
+                                Uses a binary tree to store student names and linked lists to store course names
+                                and their respective grades.</p>
+                            <div class="project-tags">
+                                <span>C++</span>
+                                <span>Binary Tree</span>
+                                <span>Linked Lists</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Text Encryption and Decryption</h3>
+                            <p>Project to encrypt and decrypt texts through an interface designed with HTML, CSS,
+                                and JavaScript.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="education" class="container">
+                <div class="resume__block animate-item">
+                    <div class="section-header">
+                        <h2>Education</h2>
+                        <div class="section-divider"></div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-logo">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Computer Engineering</h3>
+                            <h4>Pontificia Universidad Católica del Perú</h4>
+                            <span class="duration">2023 - Present</span>
+                            <p>Computer engineer with a strong scientific and technological background,
+                                internationally recognized. Skilled in developing automation solutions,
+                                with experience in high-level tasks such as analysis, design, and project management.
+                                Trained at PUCP with a focus on information systems, software engineering, and IT,
+                                supported by a solid foundation in computer science.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Joseph Aparicio</h3>
+                    <p>Computer Engineering student with a passion for technology and the development of innovative
+                        solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> joseph_539_11@hotmail.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lima, Peru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Social networks</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/josephaparicio/" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/JosephAparicio" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter" id="deactivate-bomb"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Joseph Aparicio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
