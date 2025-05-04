@@ -1,6 +1,6 @@
 # 🏠 Personal Homepage
 
-Welcome to my personal homepage! This project is a simple and elegant website created to showcase my web development journey and personal profile. It's built using HTML and CSS, with a focus on clean design and responsive layout.
+Welcome to my personal homepage! This project is a simple and elegant website created to showcase my web development journey and personal profile. It's built using HTML,CSS and JavaScript, with a focus on clean design and smooth user experience.
 
 ## 🌟 Features
 
