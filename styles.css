@@ -43,6 +43,7 @@
     --warning-color: #ffd54f;
 }
 
+/* general styles  */
 * {
     margin: 0;
     padding: 0;
@@ -214,6 +215,11 @@ body {
     height: 3px;
     background-color: var(--divider-color);
     border-radius: 2px;
+
+/* contact info styles */
+.contact-info__header,
+.contact-info__sub-header {
+    text-align: center;
 }
 
 /* ======= Contact Info ======= */
@@ -466,6 +472,11 @@ body {
 
 .language-item {
     margin-bottom: 15px;
+
+/* experience and additional info styles */
+.experiences {
+    flex: 1 1 60%;
+    margin-right: 50px;
 }
 
 .language-item span {
